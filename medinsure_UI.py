@@ -69,6 +69,7 @@ def apply_theme():
     - Blue sidebar
     - Card components
     - Simple square "M" logo
+    - Dark, readable form labels
     """
     st.markdown(
         """
@@ -83,7 +84,6 @@ def apply_theme():
             background: #0B1F3B;
             color: #E5E7EB;
         }
-
         [data-testid="stSidebar"] * {
             color: #E5E7EB !important;
         }
@@ -151,6 +151,18 @@ def apply_theme():
         /* Reduce padding at very top */
         .block-container {
             padding-top: 1.2rem;
+        }
+
+        /* Form Labels (Full name, Email, Role, etc.) */
+        label,
+        .stTextInput label,
+        .stSelectbox label,
+        .stDateInput label,
+        .stFileUploader label,
+        [data-testid="stWidgetLabel"] p {
+            color: #0B1F3B !important;   /* dark readable blue */
+            font-weight: 600 !important;
+            font-size: 0.95rem !important;
         }
         </style>
         """,
